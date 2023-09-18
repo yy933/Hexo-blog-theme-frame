@@ -1,3 +1,13 @@
+<div class="table-of-contents">
+    <%- toc(page.content, {list_number: false}) %>
+</div>
+<div class="post-img">
+        <% if (page.featured_image) {%>
+            <img src="<%= url_for(page.featured_image)%>" alt="featured_image">
+        <% } else { %>
+            <div class="h-line-primary"></div>
+        <% } %>      
+    </div>
 <div class="post-content">
     <%-page.content%>
 </div> 
