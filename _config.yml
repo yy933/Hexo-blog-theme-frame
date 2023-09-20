@@ -30,7 +30,7 @@ date_format: MMM D, YYYY
 # profile
 profile:
   title: Welcome to SimplyDevs
-  body: Note by a self-taught backend web developer
+  body: Note by a self-taught web developer
   image: /profile_cover.png
   links:
     Home: /
