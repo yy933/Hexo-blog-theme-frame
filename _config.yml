@@ -82,3 +82,12 @@ local_search:
   unescape: false # unescape html strings to the readable one
   preload: true # reload the search data when the page loads, this will accelerate the search process
 
+# copyright
+copyright:
+  author: "作者："
+  link: "本文連結："
+  license_title: "版權聲明："
+  left_license_content: "本部落格所有文章除特别聲明外，均採用"
+  right_license_content: "許可協議；如欲轉載，請註明出處。"
+
+
