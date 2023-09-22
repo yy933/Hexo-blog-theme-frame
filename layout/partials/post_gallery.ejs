@@ -4,22 +4,23 @@
             <div class="post-gallery-item">
                 <div class="post-info">
                     <div class="tag-list">
-                        <% if (post.tags && post.tags.data && post.tags.data.length > 0) {%>
-                            <% post.tags.data.forEach(function(tag) { %>
-                                <span class="post-tag">
-                                    <a href="<%-url_for(tag.path)%>">
-                                        <%=tag.name%>
-                                    </a>
-                                </span>   
-                            <% }) %>           
+                        <% if (post.tags && post.tags.data &&
+                        post.tags.data.length > 0) {%>
+                        <% post.tags.data.forEach(function(tag) { %>
+                        <span class="post-tag">
+                            <a href="<%-url_for(tag.path)%>">
+                                <%=tag.name%>
+                            </a>
+                        </span>
+                        <% }) %>
                         <% } %>
                     </div>
                     <div class="post-title">
                         <a href="<%=url_for(post.path)%>"</a>
                             <% if (post.title) {%>
-                                <%= post.title %>
+                            <%= post.title %>
                             <% } else {%>
-                                *Untitled
+                            *Untitled
                             <% } %>
                         </a>
                     </div>
@@ -27,13 +28,17 @@
                         <%- date(post.date, theme.date_format) %>
                     </span>
                 </div>
-                <div class="post-img">
-                <% if (post.featured_image) {%>
-                    <img src="<%= url_for(post.featured_image)%>" alt="featured_image">
-                <% } %>  
+                
+                    <div class="post-img">
+                    <% if (post.featured_image) {%>
+                    <a href="<%=url_for(post.path)%>"><img src="<%= url_for(post.featured_image)%>"
+                        alt="featured_image"></a>
+                    <% } %>
                 </div>
+                
             </div>
-            <div class="h-line-secondary"></div>
+        
+        <div class="h-line-secondary"></div>
         <% }) %>
     </div>
     <div id="paginator">

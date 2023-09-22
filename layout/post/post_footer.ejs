@@ -1,20 +1,33 @@
 <div class="post-footer">
+    <div class="share-post">
+        <span class="share-post-text" style="font-weight: 700; color: crimson;">分享本文：</span>
+        <!-- AddToAny BEGIN -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_line"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_linkedin"></a>
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+    </div>
     <div class="h-line-primary"></div>
     <nav class="post-nav">
         <div class="prev-item">
-           <%if (page.prev) {%>
-                <div class="icon arrow-left"></div>
-                <div class="post-link">
-                    <a href="<%=url_for(page.prev.path)%>">Prev</a>
-                </div>
+            <%if (page.prev) {%>
+            <div class="icon arrow-left"></div>
+            <div class="post-link">
+                <a href="<%=url_for(page.prev.path)%>">Prev</a>
+            </div>
             <%}%>
         </div>
         <div class="next-item">
             <%if (page.next) {%>
-                <div class="icon arrow-right"></div>
-                <div class="post-link">
-                  <a href="<%=url_for(page.next.path)%>">Next</a>  
-                </div>  
+            <div class="icon arrow-right"></div>
+            <div class="post-link">
+                <a href="<%=url_for(page.next.path)%>">Next</a>
+            </div>
             <%}%>
         </div>
     </nav>

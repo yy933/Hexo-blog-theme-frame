@@ -52,6 +52,10 @@ if (is_archive()){
     <link rel="stylesheet" href="<%- url_for(url) %>">
     <% }); %>
 <% } %>
+<%# addtoany style %>
+<style type="text/css">
+    .share-post { display: flex; justify-content: start; margin-bottom: 6px; }
+</style>
 
 <%# javascript list %>
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
@@ -71,5 +75,7 @@ if (is_archive()){
 <% if(theme.valine.enable){ %>
     <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
 <% } %>
+
+
 
 
