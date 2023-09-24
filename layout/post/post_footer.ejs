@@ -1,4 +1,28 @@
 <div class="post-footer">
+    <!-- related posts  -->
+    <% if (page.related_posts && page.related_posts.length > 0) { %>
+    <section class="related-posts">
+        <h2>相關文章</h2>
+        <ul>
+            <%
+            for (const path of page.related_posts) {
+            var posts = site.posts.filter(function(post) {
+            return post.path === path;
+            });
+            if (posts && posts.length > 0) {
+            posts.each(function(apost) {
+            %>
+            <li><a href="<%- url_for(apost.path) %>"><%= apost.title ||
+                    '(no title)' %></a></li>
+            <%
+            });
+            }
+            }
+            %>
+        </ul>
+    </section>
+    <% } %>
+    <br>
     <div class="share-post">
         <span class="share-post-text" style="font-weight: 700; color: crimson;">分享本文：</span>
         <!-- AddToAny BEGIN -->
@@ -35,4 +59,5 @@
             <%}%>
         </div>
     </nav>
+
 </div>
