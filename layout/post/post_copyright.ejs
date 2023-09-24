@@ -1,7 +1,7 @@
 <div class="post-copyright">
   <ul class="post-copyright-list">
     <li class="post-copyright-author">
-      <strong><%= theme.copyright.author %></strong><%= config.author%></a>
+      <strong><%= theme.copyright.author %></strong><a href="<%=url_for(theme.menu.About)%>"><%= config.author%></a>
     </li>
     <li class="post-copyright-link">
       <strong><%= theme.copyright.link %></strong>
@@ -10,10 +10,7 @@
     </li>
     <li class="post-copyright-license">
       <strong><%= theme.copyright.license_title %> </strong>
-      <%= theme.copyright.left_license_content %> <a rel="license"
-      href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"
-      title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC
-      BY-NC-ND 4.0</a>
+      <%= theme.copyright.left_license_content %> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0; width: 80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
       <%= theme.copyright.right_license_content %> 
     </li>
   </ul>
