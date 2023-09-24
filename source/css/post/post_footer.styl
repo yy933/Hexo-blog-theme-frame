@@ -17,6 +17,11 @@
         align-items center
         .arrow-left
             margin-right $margin-s-2
+        a
+            display flex
+            background-image unset
+            &:hover
+                font-weight 700
 
     .next-item
         display flex
@@ -26,4 +31,10 @@
         align-items center
         .arrow-right
             margin-left $margin-s-2
+        a
+            display flex
+            flex-direction row-reverse
+            background-image unset
+            &:hover
+                font-weight 700
         
